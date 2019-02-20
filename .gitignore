@@ -1,0 +1,30 @@
+# macOS
+
+.DS_Store
+Thumbs.db
+
+# Windows
+
+[Dd]esktop.ini
+
+# Node.js
+
+node_modules/
+scripts/
+package.json
+
+# Python
+
+__pycache__/
+*.cache
+*.log
+src/**.py
+main.pyc
+
+# Python rope
+
+.ropeproject/
+
+# Sublime Text
+
+*.sublime-workspace

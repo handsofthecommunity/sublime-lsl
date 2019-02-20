@@ -1,0 +1,45 @@
+{
+    "file_regex": "^::[A-Z]++::\"((?:\\\\.|[^\"\\\\])*+)\":(\\d++):(\\d++): (.*+)",
+    "selector": "source.lsl",
+    "file_patterns":
+    [
+        "*.lsl"
+    ],
+    "encoding": "utf-8",
+    "word_wrap": true,
+    "quiet": true,
+    "osx":
+    {
+        "cmd":
+        [
+            "python2.7",
+            "PYOPTIMIZER_PATH/main.py",
+            "--emap",
+            "--bom",
+            "${file}",
+            "-o",
+            "${file_path}/${file_base_name}_optimized.${file_extension}"
+        ],
+        "env":
+        {
+            "PYTHONIOENCODING": "utf-8"
+        }
+    },
+    "windows":
+    {
+        "cmd":
+        [
+            "C:\\Python27\\python.exe",
+            "PYOPTIMIZER_PATH\\main.py",
+            "--emap",
+            "--bom",
+            "${file}",
+            "-o",
+            "${file_path}\\${file_base_name}_optimized.${file_extension}"
+        ],
+        "env":
+        {
+            "PYTHONIOENCODING": "utf-8"
+        }
+    }
+}
